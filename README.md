@@ -1,1 +1,2 @@
-# -TalmudAI-AIUCD2025
+# TalmudAI-AIUCD2025
+
