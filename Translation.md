@@ -7,7 +7,7 @@ We then filtered the pairs keeping only those with at least 3 suggestions with a
 
 Rating measures were calculated for the candidate translations against the domain expert-verified target, and the delta between the version with and without suggestions was derived for each. The measures used are: SacreBLEU, BERTscore and Meteor score.
 # Source and Target
-Source indicates the original Hebrew-Aramaic string, while target indicates the Italian translation. The translation provided by a domain expert is considered the gold standard.
+Source indicates the original Hebrew-Aramaic string, while target indicates the Italian translation. The translation provided by a domain expert is considered the gold reference. We speak of gold reference instead of gold standard because these translations are not necessarily literal but may contain explanatory expansions against a cryptic Hebrew text.
 # Prompt template without context
     Sei un esperto di traduzioni dall'ebraico-aramaico all'italiano.
     Scrivi esclusivamente la traduzione di {testo ebraico} senza scrivere nient'altro.
