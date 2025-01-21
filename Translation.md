@@ -50,12 +50,12 @@ Out of 300 pairs, for 237 we found higher scores for the translation provided by
 
 The remaining 63 pairs have at least one measure with a negative delta.
 
-We asked a domain expert to evaluate these 63 pairs by anonymizing the origin of the contained strings. The results of the evaluation indicate that out of 12 pairs were identified:
+We asked a domain expert to evaluate these 63 pairs by anonymizing the origin of the contained strings. The results of the evaluation indicate that out of 63 pairs were identified:
 
-- XXX cases in which both translations were acceptable;
-- XXX cases in which the translation of the LLM alone is acceptable;
-- XXX cases in which the translation of the LLM with TM is acceptable;
-- XXX cases in which no candidate translation was acceptable.
+- 18 cases in which both translations were acceptable;
+- 4 cases in which the translation of the LLM alone is acceptable;
+- 16 cases in which the translation of the LLM with TM is acceptable;
+- 25 cases in which no candidate translation was acceptable.
 
 # "Positive" example
 Consider pair #20, which, according to the metrics, gets general improvements from the presence of prompts. The full prompt with hints for the pair passed to the LLM is:
