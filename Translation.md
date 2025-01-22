@@ -58,7 +58,7 @@ We asked a domain expert to evaluate these 63 pairs by anonymizing the origin of
 - 25 cases in which no candidate translation was acceptable.
 
 # "Positive" example
-Consider pair #20, which, according to the metrics, gets general improvements from the presence of prompts. The full prompt with hints for the pair passed to the LLM is:
+Consider a pair which, according to the metrics, gets general improvements from the presence of prompts. The full prompt with hints for the pair passed to the LLM is:
 
     Sei un esperto di traduzioni dall'ebraico-aramaico all'italiano.
 
@@ -70,36 +70,36 @@ Consider pair #20, which, according to the metrics, gets general improvements fr
     
     CONTESTO:
     
-    "source"="״זִכָּרוֹן״ – מַה שֶּׁכָּתוּב בַּנְּבִיאִים,","target"="l’espressione “per ricordo” si riferisce a quanto è scritto nei Profeti,"
+    "source"="כֵּיוָן דַּאֲמַר לָהּ ”לְמָחָר“ פְּסַקָהּ,","target"="Dal momento che le dice: “Domani” ha interrotto l’azione,"
     
-    "source"="״זִכָּרוֹן״ – מַה שֶּׁכָּתוּב בַּנְּבִיאִים,","target"="“per ricordo” si riferisce a quanto è scritto nei Profeti,"
+    "source"="כֵּיוָן דַּאֲמַר לָהּ בִּפְרוּטָה וּפְרוּטָה פְּסַקָהּ לְמִילְּתֵיהּ,","target"="Dal momento che ha detto: “Con una perutà e con una perutà”, ha interrotto l’azione,"
     
-    "source"="״בַּסֵּפֶר״ – מַה שֶּׁכָּתוּב בַּמְּגִלָּה.","target"="e infine le parole “nel libro” si riferiscono a quanto è scritto nella Meghillà."
+    "source"="כֵּיוָן דַּאֲמַר לָהּ מָנֶה","target"="Dal momento che ha detto di darle un manè,"
     
-    "source"="״בַּסֵּפֶר״ – מַה שֶּׁכָּתוּב בַּמְגִילָּה.","target"="mentre “nel libro” è riferito a quanto è scritto nella Meghillà."
+    "source"="כֵּיוָן דַּאֲמַר לָהּ ״וַאֲנִי״ –","target"="Dal momento che egli le ha detto “Anche io”,"
     
-    "source"="בַּסְּפָר מַה הוּא אוֹמֵר?","target"="Che cosa diceva loro al confine?"
+    "source"="כֵּיוָן דַּאֲמַר לָהּ ״וַאֲנִי״ –","target"="dal momento che egli le ha detto: “Anche io”,"
     
-    Scrivi esclusivamente la traduzione di ״בַּסֵּפֶר״ – מַה שֶּׁכָּתוּב בַּנְּבִיאִים, senza scrivere nient'altro
+    Scrivi esclusivamente la traduzione di כֵּיוָן דַּאֲמַר לָהּ חֲצִי פְּרוּטָה פְּסַקָהּ senza scrivere nient'altro
 
 We then see the data produced by the processing including metrics:
 
-| **N. 20** | Content | 
+|  | Content | 
 | --- | --- |
-| **Source** | <p style='direction:rtl; text-align: right'>״בַּסֵּפֶר״ – מַה שֶּׁכָּתוּב בַּנְּבִיאִים,</p> |
-| **Target** | “nel libro” è riferito a quanto è scritto nei Profeti; |
-| **LLM** | Nel libro – ciò che è scritto nei profeti |
-| **LLM+TM** | e le parole “nel libro” si riferiscono a quanto è scritto nei Profeti, |
+| **Source** | <p style='direction:rtl; text-align: right'>כֵּיוָן דַּאֲמַר לָהּ חֲצִי פְּרוּטָה פְּסַקָהּ</p> |
+| **Target** | Dal momento che le ha detto: ‘Mezza perutà’ ha interrotto l’azione |
+| **LLM** | Poiché disse a lei mezza peruta, la interruppe |
+| **LLM+TM** | Dal momento che le dice: ‘Mezza perutà’ ha interrotto l’azione |
 
                   
 || LLM | LLM+TM | Delta |
 | ------------- | ------------- | ------------- | ------------- |
-| **SacreBLEU** | 23.4624 | 39.5349 | 68.50% |
-| **BERTscore** | 0.8435 | 0.9028 | 7.03% |
-| **MeteorScore** | 0.4674 | 0.7489 | 60.23% |
+| **SacreBLEU** | 0.0 | 63.4047 | inf% |
+| **BERTscore** | 0.7239 | 0.9845 | 35.99% |
+| **MeteorScore** | 0.0327 | 0.8792 | 2588.68% |
 
 # "Negative" example
-Consider pair #19, which, according to metrics, seems to worsen its metrics in the version with prompts compared to the LLM alone. The full prompt with hints for the pair passed to the LLM is:
+Consider a pair which, according to metrics, seems to worsen its metrics in the version with prompts compared to the LLM alone. The full prompt with hints for the pair passed to the LLM is:
 
     Sei un esperto di traduzioni dall'ebraico-aramaico all'italiano.
 
@@ -125,7 +125,7 @@ Consider pair #19, which, according to metrics, seems to worsen its metrics in t
 
 We then see the data produced by the processing including metrics:
 
-| **N. 19** | Content | 
+|  | Content | 
 | --- | --- |
 | **Source** | <p style='direction:rtl; text-align: right'>נְדָרִים,</p> |
 | **Target** | Per quanto riguarda le offerte di voto, |
